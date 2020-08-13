@@ -26,16 +26,15 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-let special = {
-    newPrice:discount(){
-    if("teacher" || "student"){
-      return (price -(price*.25));
+burger.discount = function(person) {
+    if(person === "teacher" || person === "student"){
+      return (burger.price -(burger.price*.25));
     }else if("public"){
-      return (price -(price*.1));
+      return (burger.price -(burger.price*.1));
     }
   }
-}
-console.log(burger.discount("teacher"))
+
+console.log(burger.discount("public"))
 
 ///////////////Reviews (MVP)///////////////////
 
